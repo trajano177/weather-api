@@ -1,0 +1,9 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.card h1, p {
+  color: aliceblue;
+}
