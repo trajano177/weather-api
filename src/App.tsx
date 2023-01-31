@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./global.css";
 import { api } from "./lib/api";
 import { Cards } from "./components/cards";
+import foto from "././assets/search.png";
 
 export interface api {
   name: string;
@@ -44,21 +45,19 @@ export function App() {
         <div className="wave w4"></div>
       </section>
 
-      <div className="title">
-        <h1>Confira o Clima na sua cidade!</h1>
-      </div>
-
       <div className="busca">
         <form className="campo">
           <input
             type="text"
-            placeholder="Digite aqui o nome da sua cidade"
+            placeholder="Confira o clima na sua cidade!"
             onChange={(e) => {
               setQuery(e.target.value);
             }}
             onFocus={() => setCard(false)}
           />
-          <button onClick={search}>buscar</button>
+          <button onClick={search}>
+            <img src={foto} alt="" />
+          </button>
         </form>
         {card ? (
           <div className="card">{weather && <Cards b={weather} />}</div>
