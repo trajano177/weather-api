@@ -22,6 +22,7 @@ export function App() {
   const [card, setCard] = useState(false);
   const [weather, setWeather] = useState<api>({} as api);
   async function search() {
+    console.log("log");
     try {
       const response = await api.get("data/2.5/weather?", {
         params: {
@@ -31,6 +32,7 @@ export function App() {
           lang: "pt_br",
         },
       });
+
       setWeather(response.data);
     } finally {
       setCard(true);
@@ -46,7 +48,7 @@ export function App() {
       </section>
 
       <div className="busca">
-        <form className="campo">
+        <div className="campo">
           <input
             type="text"
             placeholder="Confira o clima na sua cidade!"
@@ -56,9 +58,9 @@ export function App() {
             onFocus={() => setCard(false)}
           />
           <button onClick={search}>
-            <img src={foto} alt="" />
+            <img src={foto} />
           </button>
-        </form>
+        </div>
         {card ? (
           <div className="card">{weather && <Cards b={weather} />}</div>
         ) : null}
