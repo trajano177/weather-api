@@ -1,18 +1,7 @@
 import { useState } from "react";
-import axios from "axios";
 import "./global.css";
-import { api, API_KEY } from "./lib/api";
+import { api } from "./lib/api";
 import { Cards } from "./components/cards";
-
-// export const getWeather = async (query: string) => {
-//   const response = await axios.get(URL, {
-//     params: {
-//       q: query,
-//       units: "metric",
-//       APPID: API_KEY,
-//     },
-//   });
-// };
 
 export interface api {
   name: string;
@@ -46,9 +35,15 @@ export function App() {
       setCard(true);
     }
   }
-  console.log(weather.name);
   return (
     <>
+      <section>
+        <div className="wave wave1"></div>
+        <div className="wave wave2"></div>
+        <div className="wave wave3"></div>
+        <div className="wave w4"></div>
+      </section>
+
       <div className="title">
         <h1>Confira o Clima na sua cidade!</h1>
       </div>
