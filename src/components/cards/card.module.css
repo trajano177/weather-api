@@ -20,3 +20,26 @@
 .card:hover {
   transform: translateY(-20px);
 }
+
+@media (min-width:200px) and (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 14rem;
+    height: 13rem;
+
+  }
+
+  .card img {
+    width: 60px;
+  }
+
+  .card h1, h3, p {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 23px;
+    font-size: 15px;
+  }
+}
