@@ -117,3 +117,42 @@ button {
   background: #3586ff;
   cursor: pointer;
 }
+
+@media (min-width:200px) and (max-width: 768px) {
+  .busca {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .campo {
+    width: 70%;
+    height: 4rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+  }
+
+  input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 12px;
+    padding: 4px 2px;
+  }
+
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #3586ff;
+    cursor: pointer;
+  }
+}

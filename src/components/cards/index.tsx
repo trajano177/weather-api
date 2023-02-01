@@ -20,10 +20,11 @@ export function Cards({ b }: apiTwo) {
       <div className={styles.card}>
         <div className={styles.campo}>
           <h1>{b.name}</h1>
-          <p>{`${b.main ? b.main.temp : null} ºC`} </p>
+          <h3>{`${b.main ? b.main.temp : null} ºC`} </h3>
           <img
             src={`https://openweathermap.org/img/wn/${b.weather[0].icon}@4x.png`}
           />
+          <p>{b.weather ? b.weather[0].description : null}</p>
         </div>
       </div>
     </>

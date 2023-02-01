@@ -33,8 +33,9 @@ export function App() {
       });
 
       setWeather(response.data);
-    } finally {
-      setCard(true);
+      setCard(!card);
+    } catch {
+      alert("Cidade não encontrada!");
     }
   }
   return (
@@ -47,7 +48,7 @@ export function App() {
       </section>
 
       <div className="busca">
-        <div className="campo">
+        <form className="campo">
           <input
             type="text"
             placeholder="Confira o clima na sua cidade!"
@@ -56,10 +57,10 @@ export function App() {
             }}
             onFocus={(e) => setCard(false)}
           />
-          <button onClick={search}>
+          <button type="button" onClick={search}>
             <img src={foto} />
           </button>
-        </div>
+        </form>
         {card ? (
           <div className="card">{weather && <Cards b={weather} />}</div>
         ) : null}
