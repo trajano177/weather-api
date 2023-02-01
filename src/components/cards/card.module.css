@@ -1,9 +1,22 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background: white;
+  border-radius: 20px;
+  width: 25rem;
+  height: 25rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
 }
 
-.card h1, p {
-  color: aliceblue;
+.card h1, h3, p {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 23px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
 }
