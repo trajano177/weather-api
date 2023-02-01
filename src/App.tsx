@@ -22,7 +22,6 @@ export function App() {
   const [card, setCard] = useState(false);
   const [weather, setWeather] = useState<api>({} as api);
   async function search() {
-    console.log("log");
     try {
       const response = await api.get("data/2.5/weather?", {
         params: {
@@ -55,7 +54,7 @@ export function App() {
             onChange={(e) => {
               setQuery(e.target.value);
             }}
-            onFocus={() => setCard(false)}
+            onFocus={(e) => setCard(false)}
           />
           <button onClick={search}>
             <img src={foto} />
